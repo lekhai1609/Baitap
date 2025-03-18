@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 style="background: #5f6062">Tinh Diem Trung Binh</h1>
+<input type="number" id="vat_ly">
+<input type="number" id="hoa">
+<input type="number" id="sinh_hoc"><br>
+<input type="button" id="button1" value="Tinh diem trung binh" onclick="diem_trung_binh()" style="color:darkred">
+
+
+</body>
+</html>
+
+<script>
+    function diem_trung_binh(){
+        var vat_ly=parseFloat(document.getElementById("vat_ly").value);
+        var hoa=parseFloat(document.getElementById("hoa").value);
+        var sinh_hoc=parseFloat(document.getElementById("sinh_hoc").value);
+
+        var diem_trung_binh=(vat_ly+hoa+sinh_hoc)/3;
+        document.write(diem_trung_binh);
+    }
+</script>
