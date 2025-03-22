@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI</title>
+</head>
+<body>
+
+<label><h1 style="color:red">Thước đo sức khỏe dựa trên cân nặng và chiều cao</h1></label>
+<label><input type="number" id="weight">kg</label>
+<label><input type="number" id="height">centimetter</label>
+<label><input type="button" value="Chỉ số BMI của bạn là" onclick="tinhtoan()"></label>
+
+</body>
+</html>
+<script>
+    function tinhtoan() {
+        var weight= parseInt(document.getElementById("weight").value);
+        var height = parseFloat(document.getElementById("height").value);
+        var BMI = weight / (height * height);
+        if (BMI < 18.5) {
+            document.write("Underweight");
+        }
+        else if (BMI < 25.0) {
+            document.write("Normal");
+        }
+        else if (BMI < 30.0) {
+            document.write("Overweight");
+        }
+        else {
+            document.write("Obese");
+        }
+    }
+</script>
