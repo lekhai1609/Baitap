@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 style="background:yellow">Chương Trình tính chu vi và diện tích hình tròn</h1>
+<label><input type="number" id="r" placeholder="nhập bán kính"></label>
+<label>
+  <input type="button" value="Tính Chu vi và diện tích" onclick="tinhtoan()">
+</label>
+<script>
+  function tinhtoan() {
+    var r = parseInt(document.getElementById("r").value);
+    var result = r * 2 * 3.14;
+    var result2 = r * r * 3.14;
+    document.write ("bán kính là:" + result .toFixed(2) + ("đường kính là:" + result2))
+  }
+</script>
+
+
+</body>
+</html>
