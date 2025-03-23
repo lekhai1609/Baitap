@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Chuyển đổi &#176;C sang &#176;F </h1>
+<label><input type="number" id="oC" placeholder="nhập &#176;C" required></label><br>
+<label><input type="button" value="chuyển đổi" onclick="chuyendoi()"></label>
+
+<script>
+    function chuyendoi() {
+        var oC = document.getElementById("oC").value;
+        var result = (oC * 9/5) + 32;
+        document.write (result .toFixed(2) + "&#176;F");
+
+    }
+</script>
+</body>
+</html>
