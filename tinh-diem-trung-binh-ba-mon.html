@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 style="color:Blue">Tính Điểm Trung Bình 3 Môn</h1>
+<label>
+    <input type="number" id="ly" placeholder="nhap diem ly">
+</label><br>
+<label>
+    <input type="number" id="hoa" placeholder="nhap diem hoa">
+</label><br>
+<label>
+    <input type="number" id="sinh" placeholder="nhap diem sinh">
+</label><br>
+<input type="button" value="summit" onclick="tinhtoan()">
+<div class="result" id="result"></div>
+
+<script>
+    function tinhtoan() {
+        let a = parseInt(document.getElementById("ly").value);
+        let b = parseInt(document.getElementById("hoa").value);
+        let c = parseInt(document.getElementById("sinh").value);
+        const result = (a + b + c)/3;
+document.write (result .toFixed(2));
+    }
+</script>
+
+</body>
+</html>
