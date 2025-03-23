@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tỉ giá</title>
+</head>
+<body>
+<h1 style="background:yellow">Quy đổi tiền tệ</h1>
+
+<table>
+    <tr>
+    <th>Amount</th>
+        <th>From Currency</th>
+    <th>To Currency</th>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="money" placeholder="Nhập số tiền quy đổi">
+        </td>
+        <td><select id="from">
+            <option value="VND">Việt Nam</option>
+        <option value="USD">Mỹ</option>
+        </select>
+        </td>
+        <td><select id="to">
+            <option value="USD">Mỹ</option>
+            <option value="VND">Việt Nam</option>
+        </select>
+        </td>
+    </tr>
+    </table>
+<button value="Convert" onclick="chuyendoi()">CHuyển đổi</button>
+<p id="result"></p>
+
+<script>
+    function chuyendoi() {
+        let money = document.getElementById("money").value;
+        let fromC = document.getElementById("from").value;
+        let to = document.getElementById("to").value;
+        let result;
+        if (fromC == "VND" && to == "USD") {
+            result = "result: " + (money / 23000).toFixed(2) + "USD";
+        } else if (fromC == "USD" && to == "VND") {
+            result = "result: " + (money * 23000).toFixed(2) + "VND";
+        } else if (fromC == "VND") {
+            result = "result: " + money + "VND"
+        } else {
+            result = "result: " + money + "USD";
+        }
+        document.getElementById("result").innerHTML = result;
+    }
+</script>
+
+
+
+</select>
+
+</body>
+</html>
